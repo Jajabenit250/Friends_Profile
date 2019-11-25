@@ -2,14 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
-// import ProCard from './ProCard';
-import CardList from './CardList';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import FriendApp from './containers/friendApp';
 import * as serviceWorker from './serviceWorker';
-import 'tachyons';
-import { people } from './people';
+import { searchPeople  } from './reducers';
 
+const store = createStore(searchPeople);
 ReactDOM.render( 
-<CardList people = {people}/>
+    <FriendApp store={store}/>
 , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

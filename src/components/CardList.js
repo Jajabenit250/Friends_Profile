@@ -1,6 +1,7 @@
 import React from 'react';
 import ProCard from './ProCard';
-import { people } from './people';
+import { people } from '../../src/people';
+import 'tachyons';
 
 const CardList = () => {
     const cardComponent = people.map((user, i) => {
